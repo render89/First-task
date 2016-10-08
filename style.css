@@ -1,0 +1,23 @@
+/* Styles go here */
+.critical{
+  color: green
+}
+
+td, th{
+  border: 1px solid black;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.dateclass{
+  padding: 10px;
+}
+.edit-name, .hidden{
+  display: none;
+}
+.visible{
+  /* visibility: visible */
+  display: block;
+}

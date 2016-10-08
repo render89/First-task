@@ -1,0 +1,20 @@
+<div>
+  <input 
+    type="text" 
+    ng-model="task.name" 
+    ng-class="{visible: nameEditable,'edit-name':true}">
+  <button ng-click="saveName()" ng-class="{visible: nameEditable,'edit-name':true}">saveName</button>
+  <p class="name" ng-click="changeName()" ng-class="{hidden: nameEditable}">
+    {{task.name}}
+  </p>
+  
+    {{task.description}}
+  <ul>
+    <li>data: {{data}}</li>
+    <li>status: {{status}}</li>
+    <li>error: {{error}}</li>
+  </ul>
+    
+    
+  
+</div>

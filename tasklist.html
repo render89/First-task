@@ -1,0 +1,57 @@
+<div>
+    
+  <table>
+    <thead>
+      <tr>
+        <th>
+          index
+        </th>
+        <th>
+          actual_effort
+        </th>
+        <th>
+          est_effort
+        </th>
+        <th class="dateclass">
+          date
+        </th>
+        <th>
+          name
+        </th>
+        <th>
+          tags
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="task in tasks | filter:{obj_status: 'active'}" ng-class="{critical: task.is_high_priority == true}"">
+        <td>
+         <!-- {{task.id}} -->
+          {{$index + 1}}
+        </td>
+        <td>
+          {{task.actual_effort}}
+        </td>
+        <td>
+          {{task.estimated_effort}}
+        </td>
+        <td>
+          {{task.due_date | date:'medium'}}
+        </td>
+        <td>
+          <a ng-href="#/tasks/{{task.id}}/{{task.name}}">
+            {{task.name}}
+          </a>
+        </td>
+         <td>
+           {{task.tags}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    <!-- первый способ фильтрации <div ng-repeat="task in tasksFiltered">-->
+    <!-- {{task.id}}-->
+    <!-- {{task.name}}-->
+    <!--      {{task.creation_date}}-->
+    <!--</div>-->
+  </div>
